@@ -1,0 +1,26 @@
+{
+  "name": "geonames",
+  "description": "Utilities for working with geonames.org data",
+  "author": "Damon Oehlman <damon.oehlman@sidelab.com>",
+  "tags": ["gis", "geospatial", "geonames" ],
+  "version": "0.0.1",
+  "main": "./geonames.js",
+  "engines": {
+    "node": ">= 0.4.x < 0.7.0"
+  },
+  "dependencies": {
+    "matchme": "*"
+  },
+  "devDependencies": {
+    "expect.js": "0.1.x",
+    "mocha": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/DamonOehlman/geonames.git"
+  },
+  "bugs": {
+    "url": "http://github.com/DamonOehlman/geonames/issues"
+  },
+  "contributors": []
+}
