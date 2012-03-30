@@ -10,10 +10,10 @@
   },
   "dependencies": {
     "csv": "*",
-    "debug": "*",
-    "matchme": "*"
+    "debug": "*"
   },
   "devDependencies": {
+    "filterstream": "*",
     "expect.js": "0.1.x",
     "mocha": "*"
   },
