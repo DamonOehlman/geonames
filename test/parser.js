@@ -27,7 +27,5 @@ describe('parser tests', function() {
         expect(testItems[0]).to.be.ok();
         expect(testItems[0].id).to.equal(3371096);
         expect(testItems[0].name).to.equal('Williams Reef');
-        
-        console.log(testItems);
     });
 });

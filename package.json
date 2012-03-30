@@ -24,5 +24,7 @@
   "bugs": {
     "url": "http://github.com/DamonOehlman/geonames/issues"
   },
+  
+  "scripts": { "test": "mocha --reporter spec" },
   "contributors": []
 }

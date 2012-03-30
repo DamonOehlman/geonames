@@ -19,4 +19,9 @@ describe('piping / filtering tests', function() {
                 done();
             });
     });
+    
+    it('the first item should match the file contents', function() {
+        expect(testItems[0]).to.be.ok();
+        expect(testItems[0].id).to.equal(3371123);
+    });
 });
