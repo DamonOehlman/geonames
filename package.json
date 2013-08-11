@@ -14,9 +14,6 @@
     "pull-stream": "~2.20.1"
   },
   "devDependencies": {
-    "filterstream": "*",
-    "expect.js": "0.1.x",
-    "mocha": "*",
     "tape": "~1.0.4"
   },
   "repository": {
@@ -27,7 +24,16 @@
     "url": "http://github.com/DamonOehlman/geonames/issues"
   },
   "scripts": {
-    "test": "mocha --reporter spec"
+    "test": "node test/all.js"
   },
-  "contributors": []
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "keywords": [
+    "geonames",
+    "filter",
+    "parser"
+  ],
+  "license": "MIT"
 }

@@ -63,10 +63,15 @@ var translators = [
 var fieldCount = fieldMappings.length;
 
 exports.read = function(inputFile) {
+  var count = 0;
+
   return pull(
     file.read(inputFile),
     file.split('\n'),
     pull.map(function(line) {
+      // console.log('!! LINE:');
+      // console.log(line.toString());
+
       var records = line.toString().split('\t');
       var item = new Definition();
 

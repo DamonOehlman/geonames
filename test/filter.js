@@ -1,27 +1,30 @@
-var geonames = require('../lib/geonames'),
-    filterstream = require('filterstream'),
-    path = require('path'),
-    dataPath = path.resolve(__dirname, '../data'),
-    expect = require('expect.js'),
-    testItems = [];
+var geonames = require('..');
+var path = require('path');
+var dataPath = path.resolve(__dirname, '../data');
+var test = require('tape');
+var testItems = [];
+var pull = require('pull-stream');
 
-describe('piping / filtering tests', function() {
-    it('should be able to filter data based on featureClass', function(done) {
-        geonames
-            .read(path.join(dataPath, 'BV.txt'))
-            .pipe(filterstream('featureClass == A'))
-            .on('data', function(item) {
-                expect(item).to.be.ok();
-                testItems.push(item);
-            })
-            .on('end', function() {
-                expect(testItems).to.have.length(2);
-                done();
-            });
-    });
-    
-    it('the first item should match the file contents', function() {
-        expect(testItems[0]).to.be.ok();
-        expect(testItems[0].id).to.equal(3371123);
-    });
+test('filter data based on featureClass', function(t) {
+  var stream;
+
+  t.plan(3);
+  t.ok(stream = geonames.read(path.join(dataPath, 'BV.txt')), 'have stream');
+
+  pull(
+    stream,
+    pull.filter(function(item) {
+      return item.featureClass == 'A';
+    }),
+    pull.drain(function(item) {
+      testItems.push(item);
+      t.ok(item, 'have item');
+    })
+  );
+});
+
+test('first matching item matches expected', function(t) {
+  t.plan(2);
+  t.ok(testItems[0], 'have item');
+  t.equal(testItems[0].id, 3371123);
 });
