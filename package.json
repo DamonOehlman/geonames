@@ -2,20 +2,22 @@
   "name": "geonames",
   "description": "Utilities for working with geonames.org data",
   "author": "Damon Oehlman <damon.oehlman@sidelab.com>",
-  "tags": ["gis", "geospatial", "geonames" ],
+  "tags": [
+    "gis",
+    "geospatial",
+    "geonames"
+  ],
   "version": "0.0.1",
-  "main": "./lib/geonames",
-  "engines": {
-    "node": ">= 0.4.x < 0.7.0"
-  },
   "dependencies": {
-    "csv": "*",
-    "debug": "*"
+    "debug": "*",
+    "pull-file": "~0.2.0",
+    "pull-stream": "~2.20.1"
   },
   "devDependencies": {
     "filterstream": "*",
     "expect.js": "0.1.x",
-    "mocha": "*"
+    "mocha": "*",
+    "tape": "~1.0.4"
   },
   "repository": {
     "type": "git",
@@ -24,7 +26,8 @@
   "bugs": {
     "url": "http://github.com/DamonOehlman/geonames/issues"
   },
-  
-  "scripts": { "test": "mocha --reporter spec" },
+  "scripts": {
+    "test": "mocha --reporter spec"
+  },
   "contributors": []
 }
