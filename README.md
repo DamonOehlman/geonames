@@ -6,9 +6,7 @@ This is a simple module designed to assist with working with
 
 [![NPM](https://nodei.co/npm/geonames.png)](https://nodei.co/npm/geonames/)
 
-
-[![browser support](https://ci.testling.com/DamonOehlman/geonames.png)](https://ci.testling.com/DamonOehlman/geonames)
-
+[![Build Status](https://travis-ci.org/DamonOehlman/geonames.png?branch=master)](https://travis-ci.org/DamonOehlman/geonames)
 
 ## Example Usage
 
