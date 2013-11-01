@@ -2,12 +2,25 @@
 'use strict';
 
 var Definition = require('./definition');
-var csv = require('csv');
 var fs = require('fs');
 var debug = require('debug')('geonames-parser');
-var through = require('through');
 var file = require('pull-file');
 var pull = require('pull-stream');
+var bits = require('pull-tobits');
+
+
+/**
+  # geonames
+
+  This is a simple module designed to assist with working with
+  [geonames](http://geonames.org) data files.
+
+  ## Example Usage
+
+  <<< examples/au-places.js
+
+**/
+
 var fieldMappings = [
   'id',
   'name',
@@ -66,11 +79,12 @@ exports.read = function(inputFile) {
   var count = 0;
 
   return pull(
-    file.read(inputFile),
-    file.split('\n'),
+    file(inputFile),
+    bits.split([0x0A]),
     pull.map(function(line) {
-      // console.log('!! LINE:');
-      // console.log(line.toString());
+      if (! (line instanceof Buffer)) {
+        console.log(line);
+      }
 
       var records = line.toString().split('\t');
       var item = new Definition();
@@ -78,7 +92,7 @@ exports.read = function(inputFile) {
       // iterate through the field mappings
       for (var ii = fieldCount; ii--; ) {
         if (fieldMappings[ii]) {
-          item[fieldMappings[ii]] = translators[ii] ? 
+          item[fieldMappings[ii]] = translators[ii] ?
             translators[ii](records[ii]) :
             records[ii];
         }
