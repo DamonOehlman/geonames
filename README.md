@@ -29,6 +29,19 @@ pull(
   pull.take(10),
   pull.log()
 );
+
+/* -->
+{ name: 'Perth', population: 1446704 }
+{ name: 'Mandurah', population: 73356 }
+{ name: 'Darwin', population: 93080 }
+{ name: 'Adelaide', population: 1074159 }
+{ name: 'Wagga Wagga', population: 55381 }
+{ name: 'Townsville', population: 138954 }
+{ name: 'Toowoomba', population: 92800 }
+{ name: 'Sydney', population: 4394576 }
+{ name: 'Rockhampton', population: 65850 }
+{ name: 'Nowra', population: 94781 }
+*/
 ```
 
 ## License(s)
