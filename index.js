@@ -16,6 +16,10 @@ var bits = require('pull-tobits');
 
   ## Example Usage
 
+  The following example demonstrates reading the data from the `AU.txt` file
+  and logging the population and name of the first 10 places that exceed a
+  population size of 50K:
+
   <<< examples/au-places.js
 
 **/

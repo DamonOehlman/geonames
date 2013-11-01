@@ -10,6 +10,10 @@ This is a simple module designed to assist with working with
 
 ## Example Usage
 
+The following example demonstrates reading the data from the `AU.txt` file
+and logging the population and name of the first 10 places that exceed a
+population size of 50K:
+
 ```js
 var geonames = require('geonames');
 var path = require('path');
@@ -21,7 +25,7 @@ pull(
   pull.filter(function(item) {
     return item.featureClass === 'P' && item.population > 50000
   }),
-  pull.map(pluck('name')),
+  pull.map(pluck('name', 'population')),
   pull.take(10),
   pull.log()
 );
