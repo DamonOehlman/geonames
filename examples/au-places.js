@@ -8,7 +8,7 @@ pull(
   pull.filter(function(item) {
     return item.featureClass === 'P' && item.population > 50000
   }),
-  pull.map(pluck('name')),
+  pull.map(pluck('name', 'population')),
   pull.take(10),
   pull.log()
 );

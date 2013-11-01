@@ -3,7 +3,6 @@
 
 var Definition = require('./definition');
 var fs = require('fs');
-var debug = require('debug')('geonames-parser');
 var file = require('pull-file');
 var pull = require('pull-stream');
 var bits = require('pull-tobits');
@@ -82,10 +81,6 @@ exports.read = function(inputFile) {
     file(inputFile),
     bits.split([0x0A]),
     pull.map(function(line) {
-      if (! (line instanceof Buffer)) {
-        console.log(line);
-      }
-
       var records = line.toString().split('\t');
       var item = new Definition();
 
