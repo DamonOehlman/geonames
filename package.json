@@ -4,13 +4,13 @@
   "author": "Damon Oehlman <damon.oehlman@gmail.com>",
   "version": "0.2.0",
   "dependencies": {
-    "pull-file": "~0.4.1",
-    "pull-stream": "~2.20.1",
-    "pull-tobits": "~0.1.1"
+    "pull-file": "~0.4",
+    "pull-stream": "^2",
+    "pull-tobits": "~0.2"
   },
   "devDependencies": {
-    "tape": "~2.1.0",
-    "whisk": "~0.2.1"
+    "tape": "^2",
+    "whisk": "~0.6"
   },
   "repository": {
     "type": "git",
