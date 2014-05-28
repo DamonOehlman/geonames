@@ -2,7 +2,7 @@
   "name": "geonames",
   "description": "Utilities for working with geonames.org data",
   "author": "Damon Oehlman <damon.oehlman@gmail.com>",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "dependencies": {
     "pull-file": "~0.4",
     "pull-stream": "^2",
