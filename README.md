@@ -6,7 +6,7 @@ This is a simple module designed to assist with working with
 
 [![NPM](https://nodei.co/npm/geonames.png)](https://nodei.co/npm/geonames/)
 
-[![Build Status](https://travis-ci.org/DamonOehlman/geonames.png?branch=master)](https://travis-ci.org/DamonOehlman/geonames)
+[![Build Status](https://img.shields.io/travis/DamonOehlman/geonames.svg?branch=master)](https://travis-ci.org/DamonOehlman/geonames) [![unstable](https://img.shields.io/badge/stability-unstable-yellowgreen.svg)](https://github.com/badges/stability-badges) [![Dependency Status](https://david-dm.org/DamonOehlman/geonames.svg)](https://david-dm.org/DamonOehlman/geonames) 
 
 ## Example Usage
 
@@ -48,7 +48,7 @@ pull(
 
 ### MIT
 
-Copyright (c) 2013 Damon Oehlman <damon.oehlman@gmail.com>
+Copyright (c) 2014 Damon Oehlman <damon.oehlman@gmail.com>
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
